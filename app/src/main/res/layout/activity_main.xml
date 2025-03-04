@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#003366"
+        android:elevation="8dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle aligned to the right -->
+        <TextView
+            android:id="@+id/toolbar_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:paddingEnd="16dp"
+            android:text="Developed by ICDF"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Bottom Navigation Bar-->
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="404dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="center"
+        android:text="Welcome to the Lost Roots of the Karoo"
+        android:textColor="#FAF3E0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <TextView
+        android:id="@+id/tag_state_description"
+        android:layout_width="379dp"
+        android:layout_height="139dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Join us on a journey to discover your lost ancestry and learn about the history of the Aradic Forgotten Highway of the old trade roots here in South Africa."
+        android:textColor="#FAF3E0"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/btnForgottenHighway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click here for to learn more about the Forgotten Highway."
+      />
+
+    <TextView
+        android:id="@+id/tag_state_description2"
+        android:layout_width="322dp"
+        android:layout_height="82dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginTop="196dp"
+        android:gravity="center"
+        android:text="Start learning about your ancestors journey here."
+        android:textColor="#FAF3E0"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_home_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag_state_description" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_home_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="#8B8D8E"
+        app:itemTextColor="#8B8D8E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_home_menu" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="History of the Forgotten Highway"
+        app:layout_constraintBottom_toTopOf="@+id/tag_state_description2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag_state_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
