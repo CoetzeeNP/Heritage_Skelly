@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         if (bottomNavigationView != null) {
             bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
                 if (item.getItemId() == R.id.nav_search) {
-                    Intent intent = new Intent(this, SearchActivity.class);
+                    Intent intent = new Intent(this, ActivityChoose.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     finish();

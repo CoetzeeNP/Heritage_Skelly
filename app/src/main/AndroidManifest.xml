@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Heritage"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityChoose"
+            android:exported="false" />
+        <activity
             android:name=".SelectedUserActivity"
             android:exported="false" />
         <activity
@@ -21,11 +24,11 @@
         <activity
             android:name=".SearchActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ForgottenHighwayActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
