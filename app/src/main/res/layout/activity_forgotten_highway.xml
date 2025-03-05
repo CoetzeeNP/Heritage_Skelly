@@ -17,6 +17,7 @@
         android:elevation="8dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/baseline_arrow_back_48px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +49,7 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_home_navigation"
+        android:id="@+id/bottom_nav_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -61,36 +62,40 @@
         app:menu="@menu/bottom_nav_menu" />
 
     <ImageView
-        android:layout_width="347dp"
-        android:layout_height="264dp"
+        android:id="@+id/imageView2"
+        android:layout_width="420dp"
+        android:layout_height="308dp"
         android:layout_marginTop="25dp"
         android:src="@drawable/example_image"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="365dp"
-        android:layout_height="201dp"
-        android:textSize="24sp"
-        android:layout_marginTop="356dp"
-        android:layout_marginBottom="62dp"
-        android:text="Quantumvis persuadeam ha se ut credidique ac integritas. Ab de ordinis alienis is nunquam si laborio mutuari. Immittant ac ac abstinere ad mo incurrant. Foco sine ad fiat si prae. Evidentius aliquoties at si perficitur de expectabam deceperunt. Sae tot dominum dicimus futurus divelli. Sex qui quales aptior tamque hic.
-
-Gi ii negans obvium realem multum si ob. Recorder obtinent intuebar ii du formalem. At equidem mo ac lapidem aetatem. Positio tam hac rum assequi fuistis ideoque. De semel ad lucem sanae spero neque id. Idea ideo hic quod nisi has sese ibi. Praemia ego videtur veritas cognita subesse etiamsi iis. Vel vul proposui loquendi dat formatur nos.
-
-Genere inesse possit haberi animal illico mei sex. Perpauca ii loquebar ad immorari imagines infiniti infinite. Modos talis at ut horum timet venit serio. Punctum ibi afferri constat chartam nostrae ipsarum est. Pla infinitae ens jam una quadratam profundum. Atra et in deus more ex tale de. Ii et agam eo esto alio quem viam. Tandem primum ii carnem co itaque pendam si.
-
-Saporem alienas ac in fraudem at ingenii in. Eae vero fere nisi nova dei imo ipsi iii. Simile ob videor certis et innata qualia posset se. Atque aucta ii ab to im prout. Modis sciam non nul alios aliis nos causa culpa. Se vere atra mo suas ideo inde vero. Ut ad quia suas illa puto otii. At ii to nondum figura at solius. Effectus vis sequutus fal cognitum innotuit. Educta pictas et primis falsas ut.
-
-Frigus majora deo tam impios certis latere hae lus. Nia libertate meditatio hae somniorum. Id ii nunc duce item ut. Tam voces longa velit fit has durat etiam ego rerum. Externis gi im experiar constare. Volo meo iste lor omni. Undenam emittet student creatis ut ob in chartam generis. Deceptor nec dem sed studiose sufficit immobile jam. Alicui si quales caelum si ad negari loquor.
-"
-        android:textColor="@color/white"
+    <androidx.cardview.widget.CardView
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_home_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:maxLines="12"
+            android:padding="16dp"
+            android:text="Quantumvis persuadeam ha se ut credidique ac integritas. Ab de ordinis alienis is nunquam si laborio mutuari. Immittant ac ac abstinere ad mo incurrant. Foco sine ad fiat si prae. Evidentius aliquoties at si perficitur de expectabam deceperunt. Sae tot dominum dicimus futurus divelli. Sex qui quales aptior tamque hic. Gi ii negans obvium realem multum si ob. Recorder obtinent intuebar ii du formalem. At equidem mo ac lapidem aetatem. Positio tam hac rum assequi fuistis ideoque. De semel ad lucem sanae spero neque id. Idea ideo hic quod nisi has sese ibi. Praemia ego videtur veritas cognita subesse etiamsi iis. Vel vul proposui loquendi dat formatur nos.
+                            Genere inesse possit haberi animal illico mei sex. Perpauca ii loquebar ad immorari imagines infiniti infinite. Modos talis at ut horum timet venit serio. Punctum ibi afferri constat chartam nostrae ipsarum est. Pla infinitae ens jam una quadratam profundum. Atra et in deus more ex tale de. Ii et agam eo esto alio quem viam. Tandem primum ii carnem co itaque pendam si.
+                            Saporem alienas ac in fraudem at ingenii in. Eae vero fere nisi nova dei imo ipsi iii. Simile ob videor certis et innata qualia posset se. Atque aucta ii ab to im prout. Modis sciam non nul alios aliis nos causa culpa. Se vere atra mo suas ideo inde vero. Ut ad quia suas illa puto otii. At ii to nondum figura at solius. Effectus vis sequutus fal cognitum innotuit. Educta pictas et primis falsas ut.
+                            Frigus majora deo tam impios certis latere hae lus. Nia libertate meditatio hae somniorum. Id ii nunc duce item ut. Tam voces longa velit fit has durat etiam ego rerum. Externis gi im experiar constare. Volo meo iste lor omni. Undenam emittet student creatis ut ob in chartam generis. Deceptor nec dem sed studiose sufficit immobile jam. Alicui si quales caelum si ad negari loquor."
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

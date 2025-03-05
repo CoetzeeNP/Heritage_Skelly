@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/road"
@@ -12,51 +12,32 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="#003366"
         android:elevation="8dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_48px"
+        app:subtitle="Developed by ICDF"
+        app:subtitleCentered="true"
+        app:subtitleTextColor="@color/white"
+        app:title="Search"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
 
-        <!-- Title Text -->
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"
-            android:text="Search"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <!-- Title -->
 
-        <!-- Subtitle aligned to the right -->
-        <TextView
-            android:id="@+id/toolbar_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|center_vertical"
-            android:paddingEnd="16dp"
-            android:text="Developed by ICDF"
-            android:textColor="@color/white"
-            android:textSize="10sp" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <!-- Bottom Navigation Bar-->
-
-
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/title"
-        android:layout_width="404dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Lets start unearthing your lost roots"
+        android:padding="16dp"
+        android:text="Let's start unearthing your lost roots"
         android:textColor="#FAF3E0"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -64,117 +45,120 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <TextView
-        android:id="@+id/tag_state_description4"
+        android:id="@+id/tag_state_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="Enter your ancestors "
+        android:text="Enter details about your ancestors"
         android:textColor="#FAF3E0"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:gravity="center"
+        android:padding="8dp"/>
 
-    <TextView
-        android:id="@+id/firstname"
-        android:layout_width="80dp"
+    <!-- First Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_firstname_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="First Names"
-        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tag_state_description"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="First Name">
 
-    <TextView
-        android:id="@+id/lastname"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Last Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_lastname_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input_firstname_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Last Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Place Lived Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_place_lived_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input_lastname_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Place Lived">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_place_lived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Birth Year Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_birthyear_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input_place_lived_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Birth Year">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_birthyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Search Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last Name"
+        android:text="Search"
+        android:backgroundTint="#0057D9"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
-        app:layout_constraintStart_toEndOf="@+id/firstname"
-        tools:layout_editor_absoluteY="246dp" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="204dp"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="269dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="189dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="265dp" />
-
-    <TextView
-        android:id="@+id/firstname"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Place Lived"
-        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_birthyear_layout"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="332dp" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/lastname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="birth Year"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
-        app:layout_constraintStart_toEndOf="@+id/firstname"
-        tools:layout_editor_absoluteY="332dp" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="204dp"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="351dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="189dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="351dp" />
-
+    <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:elevation="8dp"
-        app:itemIconTint="#8B8D8E"
-        app:itemTextColor="#8B8D8E"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
