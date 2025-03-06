@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="Selected User"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="30sp"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"/>
 
