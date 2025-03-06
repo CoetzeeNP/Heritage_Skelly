@@ -15,12 +15,12 @@
         android:layout_height="wrap_content"
         android:background="#003366"
         android:elevation="8dp"
-        app:navigationIcon="@drawable/baseline_arrow_back_48px"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_48px">
 
         <!-- Title Text -->
         <TextView
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:text="Home"
+            android:text="Direction"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -47,13 +47,20 @@
 
     <!-- Bottom Navigation Bar-->
 
+    <VideoView
+        android:layout_width="395dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"></VideoView>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="404dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="204dp"
         android:gravity="center"
         android:text="Are you here to:"
         android:textColor="#FAF3E0"
@@ -79,23 +86,24 @@
 
     <Button
         android:id="@+id/btnAdventure"
-        android:layout_width="231dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="36dp"
-        android:text="Find an adventure?"
+        android:layout_width="264dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:text="Find for next adventure?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/btnSearchRoots"
-        android:layout_width="231dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="312dp"
+        android:layout_width="261dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="2dp"
         android:text="Find your lost roots?"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdventure" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAdventure"
+        app:layout_constraintVertical_bias="0.09" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
